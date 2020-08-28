@@ -1,0 +1,11 @@
+.contacts {
+  overflow-y: scroll;
+  height: 75vh;
+}
+
+@media (max-width: 990px) {
+  .contacts {
+    overflow-y: hidden;
+    height: auto;
+  }
+}
