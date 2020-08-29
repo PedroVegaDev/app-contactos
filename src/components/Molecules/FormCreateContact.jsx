@@ -54,6 +54,7 @@ function FormCreateContact() {
           className="form-control-file"
           id="avatar"
           name="avatar"
+          accept=".jpg, .png"
         />
       </div>
       <button type="submit" className="btn btn-primary btn-block mt-4">
