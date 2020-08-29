@@ -3,6 +3,7 @@ import ContactCard from '../Molecules/ContactCard'
 import Pagination from '../Atoms/Pagination'
 import PageQuantity from '../Atoms/PageQuantity'
 import { currentPageState } from '../../functions/principalFunctions'
+import { Link } from 'react-router-dom'
 
 function ListContacts({ data }) {
   const [currentPage, setCurrentPage] = useState(1)
@@ -46,19 +47,26 @@ function ListContacts({ data }) {
         <PageQuantity selectPageQuantity={selectPageQuantity} />
       </div>
       <div className="col-lg-6 m-4">
-        {currentContacts.map((el, index) => {
-          return (
-            <ContactCard
-              id={el.id}
-              first_name={el.first_name}
-              last_name={el.last_name}
-              email={el.email}
-              avatar={el.avatar}
-              btnDelete={true}
-              key={index}
-            />
-          )
-        })}
+        {data.length === 0 ? (
+          <div className="d-flex flex-column align-items-center">
+            <h2>Tu lista de contactos está vacía</h2>
+            <Link to="/guardarContacto">Añadir Contacto</Link>
+          </div>
+        ) : (
+          currentContacts.map((el, index) => {
+            return (
+              <ContactCard
+                id={el.id}
+                first_name={el.first_name}
+                last_name={el.last_name}
+                email={el.email}
+                avatar={el.avatar}
+                btnDelete={true}
+                key={index}
+              />
+            )
+          })
+        )}
       </div>
     </div>
   )
