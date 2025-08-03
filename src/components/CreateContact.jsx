@@ -1,5 +1,5 @@
-import React from 'react'
-import FormCreateContact from '../Molecules/FormCreateContact'
+import React from "react";
+import FormCreateContact from "./FormCreateContact";
 
 function CreateContact() {
   return (
@@ -7,7 +7,7 @@ function CreateContact() {
       <h3 className="mb-4">Guardar Contacto</h3>
       <FormCreateContact />
     </div>
-  )
+  );
 }
 
-export default CreateContact
+export default CreateContact;

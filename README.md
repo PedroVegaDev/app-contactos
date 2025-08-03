@@ -1,32 +1,12 @@
-# Contactos App 📚
+# React + Vite
 
-Aplicación que te ayudará a guardar 💾 una lista de contactos💻.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### Qué contiene y cómo está desarrollada ❓
+Currently, two official plugins are available:
 
-- Contiene:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-  - Formulario para guardar los contactos.
-  - Listado de todos los contactos.
-  - Paginación en listado de contactos.
+## Expanding the ESLint configuration
 
-- Está desarrollado con [React](https://es.reactjs.org/), [Bootstrap](https://getbootstrap.com/) y [Firebase](https://firebase.google.com/).
-
-### Tecnologías utilizadas 👨‍💻
-
-- [create-react-app](https://github.com/facebook/create-react-app)
-- [bootstrap](https://www.npmjs.com/package/bootstrap)
-- [firebase](https://www.npmjs.com/package/firebase)
-- [react-hook-form](https://www.npmjs.com/package/react-hook-form)
-- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
-
-### Live Preview 👁‍🗨
-
-[https://pavd-contactos-app.netlify.app](https://pavd-contactos-app.netlify.app/ 'Contactos App')
-
-![Contactos App](https://firebasestorage.googleapis.com/v0/b/app-prueba-pavd.appspot.com/o/photos%2Flocalhost_3000_listaContactos.png?alt=media&token=cd34ab77-7410-4308-97f7-fc1275ef0f12)
-
-### Clona el repositorio e instala las dependencias
-
-- yarn install
-- yarn start
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

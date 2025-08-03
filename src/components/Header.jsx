@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -21,15 +21,17 @@ function Header() {
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
           <NavLink
-            className="nav-link"
-            activeClassName="active"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
             to="/listaContactos"
           >
             Listar Contactos
           </NavLink>
           <NavLink
-            className="nav-link"
-            activeClassName="active"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
             to="/guardarContacto"
           >
             Guardar Contacto
@@ -37,7 +39,7 @@ function Header() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Header
+export default Header;

@@ -1,38 +1,38 @@
-import React, { useState } from 'react'
-import ContactCard from '../Molecules/ContactCard'
-import Pagination from '../Atoms/Pagination'
-import PageQuantity from '../Atoms/PageQuantity'
-import { currentPageState } from '../../functions/principalFunctions'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import ContactCard from "./ContactCard";
+import Pagination from "./Pagination";
+import PageQuantity from "./PageQuantity";
+import { currentPageState } from "../functions/principalFunctions";
+import { Link } from "react-router-dom";
 
 function ListContacts({ data }) {
-  const [currentPage, setCurrentPage] = useState(1)
-  const [contactsPerPage, setContactsPerPage] = useState(2)
+  const [currentPage, setCurrentPage] = useState(1);
+  const [contactsPerPage, setContactsPerPage] = useState(2);
 
   const { currentContacts, totalPage } = currentPageState(
     currentPage,
     contactsPerPage,
     data
-  )
+  );
 
   function nextPage() {
     if (currentPage < totalPage) {
-      setCurrentPage(currentPage + 1)
+      setCurrentPage(currentPage + 1);
     }
   }
 
   function backPage() {
     if (currentPage > 1) {
-      setCurrentPage(currentPage - 1)
+      setCurrentPage(currentPage - 1);
     }
   }
 
   function indexPage(index) {
-    setCurrentPage(index)
+    setCurrentPage(index);
   }
 
   function selectPageQuantity(value) {
-    setContactsPerPage(parseInt(value), setCurrentPage(1))
+    setContactsPerPage(parseInt(value), setCurrentPage(1));
   }
 
   return (
@@ -64,12 +64,12 @@ function ListContacts({ data }) {
                 btnDelete={true}
                 key={index}
               />
-            )
+            );
           })
         )}
       </div>
     </div>
-  )
+  );
 }
 
-export default ListContacts
+export default ListContacts;

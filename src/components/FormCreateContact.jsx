@@ -1,9 +1,9 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import { createContact } from '../../.firebase/FirebaseFuntions'
+import React from "react";
+import { useForm } from "react-hook-form";
+import { createContact } from "../firebase/functions";
 
 function FormCreateContact() {
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit } = useForm();
 
   return (
     <form onSubmit={handleSubmit(createContact)} id="formulario">
@@ -13,7 +13,7 @@ function FormCreateContact() {
         </label>
         <input
           type="text"
-          ref={register}
+          {...register("first_name")}
           className="form-control"
           id="first_name"
           name="first_name"
@@ -26,7 +26,7 @@ function FormCreateContact() {
         </label>
         <input
           type="text"
-          ref={register}
+          {...register("last_name")}
           className="form-control"
           id="last_name"
           name="last_name"
@@ -39,7 +39,7 @@ function FormCreateContact() {
         </label>
         <input
           type="email"
-          ref={register}
+          {...register("email")}
           className="form-control"
           id="email"
           name="email"
@@ -50,7 +50,7 @@ function FormCreateContact() {
         <label htmlFor="avatar">Avatar</label>
         <input
           type="file"
-          ref={register}
+          {...register("avatar")}
           className="form-control-file"
           id="avatar"
           name="avatar"
@@ -61,7 +61,7 @@ function FormCreateContact() {
         Guardar
       </button>
     </form>
-  )
+  );
 }
 
-export default FormCreateContact
+export default FormCreateContact;
